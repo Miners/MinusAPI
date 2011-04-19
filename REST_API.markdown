@@ -28,7 +28,12 @@ Description
 
 Example
 -------------
-* A call returns the below HttpResponse. This gallery can be edited in any browser by going to http://min.us/mej0rg. The gallery can be viewed via http://min.us/vodiX5. Response: {"editor_id": "ej0rg", "reader_id": "vodiX5"}
+* A call returns the below HttpResponse.
+
+	{"editor_id": "ej0rg", "reader_id": "vodiX5"}
+	
+This gallery can be edited in any browser by going to http://min.us/mej0rg.
+The gallery can be viewed via http://min.us/mvodiX5. 
 
 UploadItem
 ===================
@@ -49,7 +54,10 @@ Note that you must prefix the id with a /i (if it's an item) or a /m (if it's a 
 Example
 ----------
 Note that the editor_id does not have the leading m that is in the page url.
-curl "http://min.us/api/UploadItem?editor_id=dn48vKBiP3q9&key=OK&filename=min.png" -F "file=@min.png" 
+
+	curl "http://min.us/api/UploadItem?editor_id=dn48vKBiP3q9&key=OK&filename=min.png" -F "file=@min.png" 
+
+Example Code:
 http://min.us/mvwUFP#1
 
 SaveGallery
