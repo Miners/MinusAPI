@@ -61,8 +61,6 @@ SaveGallery
 * items is a json encoded list of the gallery items: {"A1Q", "B1Q"}
 Example working Python code:
 
-::
-
     import httplib, urllib, urllib2, json
     params = {"name":"test2","id":"bgZrGCaapOSL2","key":"OK","items":json.dumps(["A1Q"])}
     encoded = urllib.urlencode(params)
@@ -73,20 +71,24 @@ GetItems
 * http://min.us/api/GetItems
 * Use this to retrieve items inside gallery programmatically
 
-Example: http://min.us/api/GetItems/mvgkRZC returns: 
-::
+Example: http://min.us/api/GetItems/mvph5BW
 
-    {
-        "READ_ONLY_URL_FOR_GALLERY": "http://min.us/mvgkRZC", 
-        "GALLERY_TITLE": "Untitled", 
-        "ITEMS_GALLERY": [
-             "http://i.min.us/jb0oQi", 
-             "http://i.min.us/jb0Aj2", 
-             "http://i.min.us/jdLnSy", 
-             "http://i.min.us/jdH3Au", 
-             "http://i.min.us/jdLqa6"
-         ]
-    }
+	{
+		"READ_ONLY_URL_FOR_GALLERY": "vph5BW", 
+		"GALLERY_TITLE": "Minus for WP7 Screens", 
+		"ITEMS_GALLERY": [
+			"http://i.min.us/jlZEMU.PNG", 
+			"http://i.min.us/jlVqay.PNG", 
+			"http://i.min.us/jlVwyM.PNG", 
+			"http://i.min.us/jlZCEM.PNG", 
+			"http://i.min.us/jmarjo.PNG", 
+			"http://i.min.us/jlVnSq.PNG", 
+			"http://i.min.us/jlVQoA.PNG", 
+			"http://i.min.us/jlVSwI.PNG", 
+			"http://i.min.us/jmavz4.PNG", 
+			"http://i.min.us/jmatrw.PNG"
+		]
+	}
 
 SignIn
 ============
