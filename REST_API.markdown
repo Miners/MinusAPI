@@ -45,6 +45,8 @@ Result
 You can immediately view this picture in any browser by: http://min.us/icBpkM. Returns: {"id": "cBpkM", "height": 64, "width": 500, "filesize": "1010 bytes"}
 
 Note that you must prefix the id with a /i (if it's an item) or a /m (if it's a gallery) to see access the uploaded item or new gallery.
+To view an image individually you must use a /i for the prefix and make sure that the filetype is added to the end: http://i.min.us/ik3E2S.png
+If you want to view the image in a Minus frame you can just call the id using a /I [http://min.us/lk3E2S](http://min.us/lk3E2S)
 
 Example
 ----------
@@ -73,20 +75,10 @@ GetItems
 * http://min.us/api/GetItems
 * Use this to retrieve items inside gallery programmatically
 
-Example: http://min.us/api/GetItems/mvgkRZC returns: 
+Example: http://min.us/api/GetItems/mvph5BW
 ::
 
-    {
-        "READ_ONLY_URL_FOR_GALLERY": "http://min.us/mvgkRZC", 
-        "GALLERY_TITLE": "Untitled", 
-        "ITEMS_GALLERY": [
-             "http://i.min.us/jb0oQi", 
-             "http://i.min.us/jb0Aj2", 
-             "http://i.min.us/jdLnSy", 
-             "http://i.min.us/jdH3Au", 
-             "http://i.min.us/jdLqa6"
-         ]
-    }
+   {"READ_ONLY_URL_FOR_GALLERY": "vph5BW", "GALLERY_TITLE": "Minus for WP7 Screens", "ITEMS_GALLERY": ["http://i.min.us/jlZEMU.PNG", "http://i.min.us/jlVqay.PNG", "http://i.min.us/jlVwyM.PNG", "http://i.min.us/jlZCEM.PNG", "http://i.min.us/jmarjo.PNG", "http://i.min.us/jlVnSq.PNG", "http://i.min.us/jlVQoA.PNG", "http://i.min.us/jlVSwI.PNG", "http://i.min.us/jmavz4.PNG", "http://i.min.us/jmatrw.PNG"]}
 
 SignIn
 ============
