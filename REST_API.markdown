@@ -135,23 +135,48 @@ Description
 My Galleries
 ============
 * http://min.us/api/MyGalleries.json
+* http://min.us/api/MyGalleries.json/1
+* http://min.us/api/MyGalleries.json/2
+* etc.
 
 Description
 ----------------
 
-* GET request. No params.
+* GET request. Optional page number after a forward slash
 * Exposes My Galleries page as a convenient json call.
 * If the edit url is not available, instead of starting with 'm', it will be "Unavailable". If the gallery has been deleted, the value is "Deleted". 
 
 Example
 ----------
 
-	{
-		"galleries": [
-		{ "last_visit": "7 minutes ago", "name": "test", "item_count": 1, "clicks": 4, "reader_id": "vgkRZC", "editor_id": "bgZrGCaapOSL2" },
-		{ "last_visit": "5 hours ago", "name": "test2", "item_count": 1, "clicks": 0, "reader_id": "vgkRZB", "editor_id": "bgZrGCaapOSL1" } 
-		]
-	}
+{
+       "galleries": [
+       
+               {
+                       "last_visit": "8 seconds ago",
+                       "name": "latte32",
+                       "item_count": 1,
+                       "clicks": 187,
+                       "reader_id": "vfPuqV",
+                       "editor_id": "Unavailable",
+                       "thumbnail_id": "ByEU.jpg",
+                       "creator": "Dhleong", 
+                       "is_public": "False"
+               }
+               ,
+       
+               {
+                       "last_visit": "19 seconds ago",
+                       "name": "My Piano Performances",
+                       "item_count": 7,
+                       "clicks": 699,
+                       "reader_id": "vwgTH",
+                       "editor_id": "Unavailable",
+                       "thumbnail_id": "miwrm.jpg",
+                       "creator": "Carl", 
+                       "is_public": "True"
+               }
+}
 	
 
 
