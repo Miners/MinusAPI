@@ -149,7 +149,7 @@ Description
 Example
 ----------
 
-{
+    {
        "galleries": [
        
                {
@@ -176,7 +176,7 @@ Example
                        "creator": "Carl", 
                        "is_public": "True"
                }
-}
+    }
 	
 
 
