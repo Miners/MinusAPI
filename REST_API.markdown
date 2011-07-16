@@ -180,4 +180,20 @@ Example
 	
 
 
+Set Public/Private
+================
+* http://min.us/api/set_public/
+* http://min.us/api/set_private/
 
+Description
+----------------
+* Use to set a gallery to either public or private
+* The gallery's **editor_id** should be passed after the last forward slash ('/'), much like with GetItems
+* This method does not return anything, but success is checked instead by the HTTP response. If you don't
+get 200 OK, it didn't work!
+
+Example
+----------
+
+    http://min.us/api/set_public/EDITOR_ID
+    http://min.us/api/set_private/EDITOR_ID
