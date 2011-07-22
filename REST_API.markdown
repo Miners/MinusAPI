@@ -9,7 +9,7 @@ This file documents the REST API.
 
 The API
 =======
-We have designed our API to allow you to easily create galleries and upload files programmatically. There are currently 7 API’s published with more to come in the near future. The API is open and no registration is required.
+We have designed our API to allow you to easily create galleries and upload files programmatically. There are currently 8 API’s published with more to come in the near future. The API is open and no registration is required.
 
 Please subscribe to our http://blog.minus.com for any updates regarding our API and contact us if you have any questions.
 
