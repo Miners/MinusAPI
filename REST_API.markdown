@@ -11,12 +11,12 @@ The API
 =======
 We have designed our API to allow you to easily create galleries and upload files programmatically. There are currently 7 API’s published with more to come in the near future. The API is open and no registration is required.
 
-Please subscribe to our http://blog.min.us for any updates regarding our API and contact us if you have any questions.
+Please subscribe to our http://blog.minus.com for any updates regarding our API and contact us if you have any questions.
 
 CreateGallery
 ====================
 
-* http://min.us/api/CreateGallery
+* http://minus.com/api/CreateGallery
 
 Description
 ----------------
@@ -30,39 +30,40 @@ A call returns the below HttpResponse.
 
 	{"editor_id": "ej0rg", "reader_id": "vodiX5"}
 	
-This gallery can be edited in any browser by going to http://min.us/mej0rg.
-The gallery can be viewed via http://min.us/mvodiX5. 
+The gallery can be viewed via http://min.us/mvodiX5 or http://minus.com/mvodiX5. 
+Galleries can now longer be edited in any browser via their editor_id. As of v2.06, Only the owner of the gallery
+can use the editor_id in the various "edit" APIs (such as UploadItem) to make changes to the gallery.
 
 UploadItem
 ===================
 
-* http://min.us/api/UploadItem
+* http://minus.com/api/UploadItem
 
 Parameters
 --------------
-* URL should be structured as follows: http://min.us/api/UploadItem?editor_id=enRlK&key=OK&filename=jcm3U.png
+* URL should be structured as follows: http://minus.com/api/UploadItem?editor_id=enRlK&key=OK&filename=jcm3U.png
 * Body: A standard multipart file POST.
 
 Result
 ----------
-You can immediately view this picture in any browser by: http://min.us/icBpkM.
+You can immediately view this picture in any browser by: http://min.us/lcBpkM or http://minus.com/lcBpkM.
 
 	{"id": "cBpkM", "height": 64, "width": 500, "filesize": "1010 bytes"}
 
-Note that you must prefix the id with a /i (if it's an item) or a /m (if it's a gallery) to see access the uploaded item or new gallery.
+Note that you must prefix the id with a /l (if it's an item) or a /m (if it's a gallery) to see access the uploaded item or new gallery.
 
 Example
 ----------
 Note that the editor_id does not have the leading m that is in the page url.
 
-	curl "http://min.us/api/UploadItem?editor_id=dn48vKBiP3q9&key=OK&filename=min.png" -F "file=@min.png" 
+	curl "http://minus.com/api/UploadItem?editor_id=dn48vKBiP3q9&key=OK&filename=min.png" -F "file=@min.png" 
 
 Example Code:
-http://min.us/mvwUFP
+http://minus.com/mvwUFP
 
 SaveGallery
 ===========
-* http://min.us/api/SaveGallery
+* http://minus.com/api/SaveGallery
 
 Description
 ----------------
@@ -77,11 +78,11 @@ Example
     import httplib, urllib, urllib2, json
     params = {"name":"test2","id":"bgZrGCaapOSL2","key":"OK","items":json.dumps(["A1Q"])}
     encoded = urllib.urlencode(params)
-    f = urllib2.urlopen('http://min.us/api/SaveGallery ', encoded)
+    f = urllib2.urlopen('http://minus.com/api/SaveGallery ', encoded)
 
 GetItems
 ============
-* http://min.us/api/GetItems
+* http://minus.com/api/GetItems
 
 Description
 ----------------
@@ -91,7 +92,7 @@ Description
 Example
 ----------
 
-http://min.us/api/GetItems/mvph5BW
+http://minus.com/api/GetItems/mvph5BW
 
 	{
 		"READ_ONLY_URL_FOR_GALLERY": "vph5BW", 
@@ -112,7 +113,7 @@ http://min.us/api/GetItems/mvph5BW
 
 SignIn
 ============
-* http://min.us/api/SignIn
+* http://minus.com/api/SignIn
 
 Description
 ----------------
@@ -124,7 +125,7 @@ Description
 
 SignOut
 ============
-* http://min.us/api/SignOut
+* http://minus.com/api/SignOut
 
 Description
 ----------------
@@ -134,9 +135,9 @@ Description
 
 My Galleries
 ============
-* http://min.us/api/MyGalleries.json
-* http://min.us/api/MyGalleries.json/1
-* http://min.us/api/MyGalleries.json/2
+* http://minus.com/api/MyGalleries.json
+* http://minus.com/api/MyGalleries.json/1
+* http://minus.com/api/MyGalleries.json/2
 * etc.
 
 Description
@@ -182,8 +183,8 @@ Example
 
 Set Public/Private
 ================
-* http://min.us/api/set_public/
-* http://min.us/api/set_private/
+* http://minus.com/api/set_public/
+* http://minus.com/api/set_private/
 
 Description
 ----------------
@@ -195,5 +196,5 @@ get 200 OK, it didn't work!
 Example
 ----------
 
-    http://min.us/api/set_public/EDITOR_ID
-    http://min.us/api/set_private/EDITOR_ID
+    http://minus.com/api/set_public/EDITOR_ID
+    http://minus.com/api/set_private/EDITOR_ID
