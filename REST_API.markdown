@@ -133,12 +133,15 @@ Description
 * GET request. No params.
 * Clears cookie, signs out user.
 
-My Galleries
+Timeline APIs
 ============
 * http://minus.com/api/MyGalleries.json
 * http://minus.com/api/MyGalleries.json/1
 * http://minus.com/api/MyGalleries.json/2
 * etc.
+* http://minus.com/api/pane/history.json
+* http://minus.com/api/pane/mine.json
+* http://minus.com/api/pane/feed.json
 
 Description
 ----------------
@@ -147,6 +150,8 @@ Description
 * Exposes My Galleries page as a convenient json call.
 * Total number of available pages are in the "total_pages" entry
 * If the edit url is not available, instead of starting with 'm', it will be "Unavailable". If the gallery has been deleted, the value is "Deleted". 
+* NEW: The /api/pane/... APIs allow access to the relevant panes from the main website with the same interface as MyGalleries.json. They also accept the same page number after a forward slash
+* /pane/history.json is the same as MyGalleries.json
 
 Example
 ----------
