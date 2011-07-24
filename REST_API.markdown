@@ -145,12 +145,14 @@ Description
 
 * GET request. Optional page number after a forward slash
 * Exposes My Galleries page as a convenient json call.
+* Total number of available pages are in the "total_pages" entry
 * If the edit url is not available, instead of starting with 'm', it will be "Unavailable". If the gallery has been deleted, the value is "Deleted". 
 
 Example
 ----------
 
     {
+       "total_pages": 1,
        "galleries": [
        
                {
