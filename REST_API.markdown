@@ -43,6 +43,8 @@ Parameters
 --------------
 * URL should be structured as follows: http://minus.com/api/UploadItem?editor_id=enRlK&key=OK&filename=jcm3U.png
 * Body: A standard multipart file POST.
+* Should include the **Content-Disposition** header with a value of "**attachment; filename=a.bin**".
+* Should include the **Content-Type** header with a value of "**application/octet-stream**".
 
 Result
 ----------
@@ -110,6 +112,39 @@ http://minus.com/api/GetItems/mvph5BW
 			"http://i.min.us/jmatrw.PNG"
 		]
 	}
+
+Register
+============
+* http://minus.com/api/login/register
+
+Description
+----------------
+* Use this to register a new user.
+* POST request type, parameters are **username**, **email**, **password1**, and **password2**.
+* **password1** and **password2** must be equal to have a successful registration.
+* Will return a JSON dictionary containing a success value, and an optional error variable.
+* The email parameter must be included, but can be left blank if the user does not want to sign up with an email.
+
+Possible Return Values
+----------------
+
+**Successful Registration**
+
+	{"success": true}
+	
+**Failed Registration**
+
+	{"success": false}
+
+	{"username": "This username is already taken.", "success": false}
+
+	{"username": "A username is required.", "success": false}
+
+	{"password": "A password is required.", "success": false}
+
+	{"password": "The password does not match.", "success": false}
+
+	{"email": ""This email is invalid.", "success": false}
 
 SignIn
 ============
