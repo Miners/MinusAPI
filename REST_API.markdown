@@ -28,11 +28,10 @@ Example
 -------------
 A call returns the below HttpResponse.
 
-	{"editor_id": "ej0rg", "reader_id": "vodiX5"}
+	{"editor_id": "eBYwRX", "reader_id": "eBYwRX"}
 	
-The gallery can be viewed via http://min.us/mvodiX5 or http://minus.com/mvodiX5. 
-Galleries can now longer be edited in any browser via their editor_id. As of v2.06, Only the owner of the gallery
-can use the editor_id in the various "edit" APIs (such as UploadItem) to make changes to the gallery.
+The gallery can be viewed via http://min.us/meBYwRX or http://minus.com/meBYwRX (by adding an **m** before the reader_id).
+Galleries can no longer be edited in any browser via their editor_id. As of v2.06, the gallery owner can use the editor_id in the various "edit" APIs (such as UploadItem) to make changes to the gallery, as long as a valid cookie is given along with the request.  The reader_id can also be used instead of the editor_id in any of the Edit APIs.
 
 UploadItem
 ===================
